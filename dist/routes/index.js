@@ -20,9 +20,9 @@ var _db = require('../db');
 
 var _db2 = _interopRequireDefault(_db);
 
-var _foodtruck = require('../controller/foodtruck');
+var _father = require('../controller/father');
 
-var _foodtruck2 = _interopRequireDefault(_foodtruck);
+var _father2 = _interopRequireDefault(_father);
 
 var _account = require('../controller/account');
 
@@ -39,7 +39,7 @@ var router = (0, _express2.default)();
   router.use((0, _middleware2.default)({ config: _config2.default, db: db }));
 
   //api routes v1 (/v1)
-  router.use('/foodtruck', (0, _foodtruck2.default)({ config: _config2.default, db: db }));
+  router.use('/father', (0, _father2.default)({ config: _config2.default, db: db }));
   router.use('/account', (0, _account2.default)({ config: _config2.default, db: db }));
 });
 
